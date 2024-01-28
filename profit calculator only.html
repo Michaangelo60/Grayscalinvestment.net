@@ -1,0 +1,66 @@
+
+
+<link href="profit calculator css.css" rel="stylesheet">
+
+
+<div class="row justify-content-center">
+    <div class="col-lg-6 col-mb-10">
+        <div class="feature feature-inline card card-s3 flex-wrap flex-sm-nowrap animated" data-animate="fadeInUp" data-delay="0.2">
+            <div class="feature-text">
+                <h5 class="title title-md">PROFIT CALCULATOR</h5>
+                <select id="investment-plan" class="input-bordered">
+                    <option value="1">2.03% DAILY FOR 6 DAYS</option>
+                    <option value="2">3.05% DAILY FOR 16 DAYS</option>
+                    <option value="3">4.03% DAILY FOR 28 DAYS</option>
+                    <option value="4">5% DAILY FOR 52 DAYS</option>
+                </select><br><br>
+                <input type="number" id="amount" value="100" placeholder="Amount" class="input-bordered"/><br><br>
+                <span>PROFIT: </span><span id="profit">$0.00</span><br><br>
+                <span>INCLUDING CAPITAL: </span><span id="capital">$0.00</span>
+                <script>
+                    let amount = document.getElementById("amount");
+                    let plan = document.getElementById("investment-plan");
+                    let profit = document.getElementById("profit");
+                    let capital = document.getElementById("capital");
+                    let result;
+                    
+                    amount.onkeyup = function(){
+                        profit_cal();
+                    }
+            
+                    plan.onchange = function(){
+                        profit_cal();
+                    }
+                    
+                    function profit_cal(){
+                        
+                        if(plan.value == 1){
+                            result = (((2.03*6)/100)*parseFloat(amount.value))
+                            profit.innerText = "$"+(result).toFixed(2);
+                            capital.innerText = "$"+(parseFloat(result)+parseFloat(amount.value)).toFixed(2);
+                        }
+                        else if(plan.value == 2){
+                            result = (((3.05*16)/100)*parseFloat(amount.value));
+                            profit.innerText = "$"+(result).toFixed(2);
+                            capital.innerText = "$"+(parseFloat(result)+parseFloat(amount.value)).toFixed(2);
+                        }
+                        else if(plan.value == 3){
+                            result = (((4.03*28)/100)*parseFloat(amount.value));
+                            profit.innerText = "$"+(result).toFixed(2);
+                            capital.innerText = "$"+(parseFloat(result)+parseFloat(amount.value)).toFixed(2);
+                        }
+                        else if(plan.value == 4){
+                            result = (((5*52)/100)*parseFloat(amount.value));
+                            profit.innerText = "$"+(result).toFixed(2);
+                            capital.innerText = "$"+(parseFloat(result)+parseFloat(amount.value)).toFixed(2);
+                        }
+                        
+                    }
+                    profit_cal();
+                    
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+

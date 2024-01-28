@@ -1,0 +1,184 @@
+
+
+
+<!doctype html>
+<html lang="en">
+
+
+<!-- Mirrored from finapp.bragherstudio.com/view/app-index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jul 2020 11:11:19 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>asylumfinanceltd.net - User Dashboard</title>
+      <link rel="stylesheet" href="assets/css/style.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <link rel="icon" href="images/favicon.png" sizes="32x32" />
+<link rel="icon" href="images/favicon.png" sizes="192x192" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="calc/js/html5.js" type="text/javascript"></script>
+<script src="calc/js/scripts.js" type="text/javascript"></script>
+<script src="calc/js/jquery.bxslider.min.js" type="text/javascript"></script>
+<script src="calc/js/jquery-ui.js" type="text/javascript"></script>
+<script type="text/javascript" src="calc/source/jquery.fancybox.js"></script>
+<script type="text/javascript" src="calc/source/helpers/jquery.fancybox-media.js"></script>
+
+<link rel="stylesheet" href="profit calculator css.css" type="text/css" />
+		
+			
+			
+
+                                
+                <td colspan=2><input type=button data-toggle="modal" data-target="#proceed" value="PROCEED" class="btn btn-primary btn-block btn-sm"></td>
+ 
+                </div>
+                
+
+                
+        <div class="modal fade dialogbox" id="proceed" data-backdrop="static" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Start an Investment</h5>
+                    </div>
+                    
+                        <div class="modal-body text-left mb-2">
+                            
+                            <div class="form-group basic">
+                                <div class="input-wrapper">
+                                    <label class="label" for="service">Service</label>
+                                    <select class="form-control custom-select" id="service">
+                                        <option value="1">Crypto Investment</option>                                               
+                                        <!--<option value="2">Real Estate</option> -->
+                                        <option value="2">Asset Management</option> 
+                                                                            </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group basic">
+                                <div class="input-wrapper">
+                                    <label class="label" for="investment_plans">Investment Plans</label>
+                                    <div>
+                                        <select class="form-control custom-select" name="h_id">
+                                            <option value="1">2.03% Daily for 6 days</option>                                               
+                                            <option value="2">3.05% Daily for 16 Days</option> 
+                                            <option value="3">4.03% Daily for 28 days</option> 
+                                            <option value="4">5% Weekly for 52 days</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <!--<div>
+                                        <select class="form-control custom-select" name="h_id">
+                                            <option value="5">2.08% Daily for 32 days</option>                                               
+                                            <option value="6">3.05% Daily for 52 days</option> 
+                                            <option value="7">4.05% Daily for 78 days</option> 
+                                            <option value="8">6% Daily for 243 days</option>
+                                        </select>
+                                    </div>-->
+                                    
+                                    <div>
+                                        <select class="form-control custom-select" name="h_id">
+                                            <option value="9">1.7% Daily for 181 days</option>                                               
+                                            <option value="10">2% Daily for 365 days</option>
+                                        </select>
+                                    </div>
+                                    
+                                   
+                                                                           
+                                    
+                                    
+                                </div>
+                            </div>
+                            
+                            
+
+                           <div class="form-group basic">
+                                <div class="input-wrapper">
+                                    <label class="label" for="account2">Select Wallet</label>
+                                    <select class="form-control custom-select" id="account2" name="type">
+                                                                                                          
+                                    <option value="account_1006">  Spend funds from the Account Balance Bitcoin </option>
+                                                                                                                                                 
+                                    <option value="account_1007">  Spend funds from the Account Balance USDT(ERC20) </option>
+                                                                                                                                                                                                                            
+                                    <option value="account_1009">  Spend funds from the Account Balance USDT(TRC20) </option>
+                                                                                                                                                                                          <option value="process_1006">  Spend funds from Bitcoin </option>
+                                                                                                                                                      <option value="process_1007">  Spend funds from USDT(ERC20) </option>
+                                                                                                                                                      <option value="process_1008">  Spend funds from Ethereum </option>
+                                                                                                                                                      <option value="process_1009">  Spend funds from USDT(TRC20) </option>
+                                                                                                                               
+                                    </select>
+                                </div>
+                            </div>
+                                
+                                
+                                <div class="form-group basic">
+                                    <label class="label">Enter Amount</label>
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="input2">$</span>
+                                        </div>
+                                        <input type="text" id="amount" value="10.00" name="amount" class="form-control form-control-lg">
+                                    </div>
+                                </div>
+
+                            <div class="modal-footer">
+                            <div class="btn-inline">
+                                <button type="button" class="btn btn-text-secondary"
+                                    data-dismiss="modal">CANCEL</button>
+                                <button type="submit" class="btn btn-text-primary" value="Spend">Process</button>
+                            </div>
+                        </div>
+                               
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        
+        <script>
+
+            let service = document.getElementById("service");
+            let investment_plans = document.getElementById("investment_plans");
+            let account2 = document.getElementById("account2");
+            let h_id = document.getElementsByName("h_id");
+            let amount = document.getElementById("amount");
+            
+            h_id[0].style.display = "block";
+            h_id[0].removeAttribute("disabled");
+            h_id[1].style.display = "none";
+            h_id[1].setAttribute("disabled",true);
+            // h_id[2].style.display = "none";
+            // h_id[2].setAttribute("disabled",true);
+            
+            service.onchange = function(){
+                
+                if(this.value == 1){
+                    h_id[0].style.display = "block";
+                    h_id[0].removeAttribute("disabled");
+                    h_id[1].style.display = "none";
+                    h_id[1].setAttribute("disabled",true);
+                    amount.value = 100;
+                }
+                else if(this.value == 2){
+                    h_id[0].style.display = "none";
+                    h_id[0].setAttribute("disabled",true);
+                    h_id[1].style.display = "block";
+                    h_id[1].removeAttribute("disabled");
+                    amount.value = 500;
+                }
+                else if(this.value == 3){
+                    h_id[0].style.display = "none";
+                    h_id[0].setAttribute("disabled",true);
+                    h_id[1].style.display = "none";
+                    h_id[1].setAttribute("disabled",true);
+                    // h_id[2].style.display = "block";
+                    // h_id[2].removeAttribute("disabled");
+                    amount.value = 5000;
+                }
+            }
+        </script>
+ 
+
+</form>
+
